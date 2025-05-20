@@ -1,0 +1,164 @@
+/* Reseteo de los valores. */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+
+}
+
+/* Body. */
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--color-background-page);
+}
+
+/* Main. */
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustes de tamaño y posicionamiento (de los objetos que contiene) para la tarjeta. */
+#card{
+  height: 600px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 10px 10px 10px 10px var(--color-background-card-shadow);
+  background-color: var(--color-background-card);
+}
+
+/* Ajustes de tamaño y posicionamiento para el globo "privateArea" central. */
+#privateArea{
+  height: 140px;
+  width: 220px;
+  margin: 15px 0px 25px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--color-background-privateArea);
+}
+
+/* Ajustes de posicionamiento para el texto central. */
+#textPrivateArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Ajustes de posicionamiento para el formulario completo. */
+#loginCheck{
+  height: auto;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Ajustes de tamaño y posicionamiento para el apartado de usuario del formulario. */
+#user{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustes de tamaño para el apartado de los iconos del formulario. */
+.icon{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 7%;
+  border-bottom-left-radius: 7%;
+  background-color: var(--color-background-form-icons);
+}
+
+/* Ajustes de tamaño y posicionamiento para el apartado de contraseña del formulario. */
+#password{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustes de tamaño para el apartado de insercción/aportes del formulario. */
+input{
+  height: 40px;
+  width: 250px;
+  padding: 0px 15px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: transparent;
+  border-color: transparent;
+  background-color: var(--color-background-form-elements);
+}
+
+/* Ajustes de tamaño para el apartado del botón del formulario. */
+#buttonCheck{
+  height: 40px;
+  width: 270px;
+  margin: 7px 0px 25px 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: var(--color-background-form-buttonCheck);
+}
+
+/* Fondo de pantalla. */
+#background{
+  /* Fijamos la imagen al viewport, es decir, a la parte visible de la página. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  /* Recorta el sorbrante de la imagen. */
+  object-fit: cover;
+  /* Aplica una capa de opacidad/transparencia. */
+  opacity: 0.1;
+}
+
+h5{
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-general);
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  color: var(--color-main);
+}
+
+p{
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-title);
+  letter-spacing: 2.5px;
+  font-weight: bold;
+  /*color: var(--color-main);*/
+}
