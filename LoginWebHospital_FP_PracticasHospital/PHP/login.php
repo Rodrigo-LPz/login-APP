@@ -10,12 +10,12 @@ class LdapValidates
     {
         $usuario = trim($user);
         if (!strlen($user)){
-            throw new AuthenticationException('Usuario incorrecto.');
+            throw new AuthenticationException('El Usuario incorrecto.');
         }
         if(preg_match('/[^a-zA-Z0-9]/', $usuario) or
             preg_match('/\x00/',$usuario))
         {
-            throw new AuthenticationException('Usuario contiene carácteres no validos.');
+            throw new AuthenticationException('El Usuario contiene carácteres no validos.');
         }
         return $usuario;
     }
