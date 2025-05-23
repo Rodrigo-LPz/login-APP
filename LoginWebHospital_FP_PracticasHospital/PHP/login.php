@@ -10,37 +10,76 @@ class LdapValidates
     {
         $usuario = trim($user);
         if (!strlen($user)){
-            throw new AuthenticationException('Usuario incorrecto');
+            throw new AuthenticationException('Usuario incorrecto.');
         }
         if(preg_match('/[^a-zA-Z0-9]/', $usuario) or
             preg_match('/\x00/',$usuario))
         {
-            throw new AuthenticationException('Usuario contiene caracteres no validos');
+            throw new AuthenticationException('Usuario contiene carácteres no validos.');
         }
         return $usuario;
     }
-    
-    public function validatePasswordSyntax($password)
+
+    public function validatePasswordSyntax($password, $user = '')
     {
         $pass = trim($password);
+
+        // Contraseña vacia.
         if (!strlen($pass)){
-            throw new AuthenticationException('Contraseña vacia');
+            throw new AuthenticationException(message: 'La Contraseña está vacia.');
+
+        // Contraseña con -12 caracteres.
+        } else if (strlen(string: $pass) < 12){
+            throw new AuthenticationException(message: 'La Contraseña debe tener un mínimo de 12 carácteres.');
+
+        // Contraseña con +64 caracteres.
+        } else if (strlen(string: $pass) >64){
+            throw new AuthenticationException(message: 'La Contraseña no puede exceder el máximo de 64 carácteres.');
+
+        // Contraseña con mayor permisibilidad al tener +16 caracteres.
+        } else if (strlen($pass) >= 16){
+            return $pass;
+
+        // Contraseña con mayores restricciones al tener -16 caracteres
+        } else{
+            // Contraseña con caracteres no validos (espacios).
+            if (preg_match('/\x00/', $pass)){
+                throw new AuthenticationException('La Contraseña contiene carácteres no validos.');
+            }
+
+            // Validar contraseña con caracteres permitidos (evita letras con tildes, diéresis, ñ, etc.)
+            if (!preg_match('/^[A-Za-z0-9!@#$%\*\(\)_\+=:,\.?]+$/', $pass)){
+                throw new AuthenticationException('La Contraseña contiene carácteres no permitidos.');
+            }
+
+            // Requisitos por categorías.
+                // Al menos una letra mayúscula.
+                if (!preg_match('/[A-Z]/', $pass) || preg_match('/Ñ|Á|É|Í|Ó|Ú|À|È|Ì|Ò|Ù|Â|Ê|Î|Ô|Û|Ä|Ë|Ï|Ö|Ü/', $pass)){
+                    throw new AuthenticationException('La Contraseña debe incluir al menos una letra mayúscula válida (sin Ñ ni vocales con tilde).');
+                }
+
+                // Al menos una letra minúscula.
+                if (!preg_match('/[a-z]/', $pass) || preg_match('/ñ|á|é|í|ó|ú|à|è|ì|ò|ù|â|ê|î|ô|û|ä|ë|ï|ö|ü/', $pass)){
+                    throw new AuthenticationException('La Contraseña debe incluir al menos una letra minúscula válida (sin ñ ni vocales con tilde).');
+                }
+
+                // Al menos un dígito numérico.
+                if (!preg_match('/[0-9]/', $pass)){
+                    throw new AuthenticationException('La Contraseña debe incluir al menos un dígito numérico.');
+                }
+
+                // Al menos un carácter especial.
+                if (!preg_match('/[!@#$%\*\(\)_\+=:,\.?]/', $pass)){
+                    throw new AuthenticationException('La Contraseña debe incluir al menos un carácter especial permitido ([!@#$%\*\(\)_\+=:,\.?]).');
+                }
+
+                // Diferenciación con parecidos a datos personales (nombre, email, usuario...).
+                if (!empty($user) && stripos($pass, $user) !== false){
+                    throw new AuthenticationException('La Contraseña no puede contener datos personales ni parecidos al de otros campos (nombre, email, usuario...)');
+                }
+
+            return $pass;
         }
-        /*
-        * Suponiendo que por defecto el archivo ".php" trabaja bajo expresiones regulaes "UTF-8".
-        * 
-        * "\p{L}"           permite cualquier carácter no numérico, letras y carácteres especiales, incluyendo ('ñ' y carácteres con tildes, 'á', etc.).
-        * "\p{N}"           permite cualquier carácter numérico ('0', '7', etc.).
-        * "\x20"            permite espacios.
-        * "!@#$%^&*().,_\-" permite carácteres específicos ('@', '&', etc.).
-        * "u"               indica que la cadena está trabajando en UTF-8.
-        *
-        * "\x00"            no permite/bloquea los carácteres nulos.
-        */
-        if(preg_match('/[^\p{L}\p{N}!@#$%^&*().,_\-]/u', $pass) or preg_match('/\x00/',$pass)){
-            throw new AuthenticationException('La contraseña contiene caracteres no validos');
-        }
-        return $pass;
     }
 
     public function conectaLdap($host, $puerto, $user_ldap, $clave)
