@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área privada (Pacientes Urgencias) - loging</title>
+    <!-- Icon -->
+    <link rel="icon" href="Images/LogoGobierno.png">
+    <!-- Fav-Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('2.0/CSS/style.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('2.0/CSS/style.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('2.0/Images/style.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('2.0/CSS/animations.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('2.0/CSS/global.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('2.0/CSS/media-queries.css') }}"/>
+    <!-- JS -->
+    <script src="{{ asset('2.0/JS/script.js') }}" defer></script>    
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id="card">
+            <img id="front" src="{{ asset('2.0/Images/img_front.png') }}" alt="Área de Salud de Lanzarote - HOSPITAL UNIVERSITARIO DOCTOR JOSÉ MOLINA OROSA">
+            <div id="privateArea">
+                <img id="logo" src="{{ asset('2.0/Images/LogoHospital.png') }}" alt="Área Privada">
+                <div id="textPrivateArea">
+                    <p id="area">Área</p>
+                    <p id="privada">Privada</p>
+                </div>
+            </div>
+            <form id="loginCheck">
+                <div id="user">
+                    <div class="icon">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    </div>
+                    <input type="text" id="formUser" name="Username" placeholder="Usuario de Dominio" required>
+                </div>
+                <div id="password">
+                    <div class="icon">
+                        <i class="fa-solid fa-key" style="color: #000000;"></i>
+                    </div>
+                    <input type="password" id="formPassword" name="Password" placeholder="Clave de Dominio" required>
+                </div>
+                <div id="button">
+                    <button type="submit" id="buttonCheck" name="Button"> Acceder</button>
+                </div>
+            </form>
+            <h5>Gerencia de Servicios Sanitarios - Área de Salud de Lanzarote</h5>
+        </div>
+    </main>
+    <footer></footer>
+    <img id="background" src="{{ asset('2.0/Images/Fondo.png') }}" alt="#">
+</body>
+</html>
+{% block page %}
+	{% if error %}
+		<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+	{% endif %}
+{% endblock %}
