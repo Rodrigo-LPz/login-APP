@@ -1,0 +1,185 @@
+.headerWrapper {
+  width: 70%;
+  margin-left: 20%;
+  text-align: center;
+  float: left; }
+
+.headerApp {
+  display: inline-block; }
+  .headerApp img {
+    float: left; }
+  .headerApp div {
+    float: left;
+    margin: 20px 4px; }
+  .headerApp #logo-scs {
+    margin-top: 10px;
+    width: 14%; }
+  .headerApp #logo-gobc {
+    width: 6%; }
+  .headerApp .titleApp {
+    display: inline-block;
+    margin: 0px;
+    width: 100%; }
+  .headerApp .company {
+    display: inline-block;
+    margin: 0px;
+    width: 100%;
+    font-size: 0.7em; }
+
+a.button-logout {
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 6px 4px;
+  right: 1%;
+  top: 36px; }
+
+div.button-logout {
+  background-image: url("../img/log_out-20x20.png");
+  background-repeat: no-repeat;
+  min-height: 20px;
+  padding-left: 22px;
+  width: 100%; }
+
+a.button-homepage {
+  position: absolute;
+  left: 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 6px 10px;
+  top: 36px; }
+
+a.button-notes {
+  position: absolute;
+  left: 12%;
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 6px 10px;
+  top: 36px; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    border: 1px solid gray;
+    display: inline-block;
+    width: 100%; }
+    ul li div {
+      float: left; }
+  ul .header {
+    background-color: #c4f1c5;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: arial;
+    padding: 6px 0px; }
+    ul .header .initDate:hover, ul .header .surname:hover, ul .header .location:hover {
+      cursor: pointer; }
+    ul .header .initDate div {
+      width: 50%; }
+    ul .header .actions {
+      margin: 0px 0px 0px 10px; }
+    ul .header .phone {
+      padding-right: 0.3%;
+      padding-left: 0.3%; }
+    ul .header .observations {
+      padding-right: 0.4%; }
+    ul .header .visit {
+      width: 3%;
+      writing-mode: vertical-lr; }
+      ul .header .visit input {
+        margin-top: 50%; }
+    ul .header .note {
+      margin-left: 0.3%; }
+  ul .activo:nth-child(odd) {
+    background-color: #cce0ea; }
+  ul .cancelado {
+    background-color: #f0f1a6; }
+  ul .cerrado {
+    background-color: #b9d49a; }
+  ul .actions {
+    margin-top: 10px; }
+  ul .button {
+    padding: 2px 4px;
+    background-color: #dadada;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    text-decoration: none;
+    background: -moz-linear-gradient(#f3f2f2, #bbbbbb);
+    background: linear-gradient(#f3f2f2, #bbbbbb);
+    color: #4e4e4e;
+    font-weight: bold;
+    font-family: "Lucida Sans";
+    font-size: 10px; }
+
+.clinicalProcedure {
+  font-size: 0.8em; }
+
+.note {
+  width: 8%; }
+
+.surname {
+  width: 20%;
+  padding-left: 4px; }
+
+.initDate, .endDate {
+  width: 7%;
+  text-align: center; }
+
+.location {
+  width: 11%;
+  text-align: center; }
+  .location .title {
+    margin-left: 20%; }
+
+.phone {
+  width: 11%;
+  min-width: 11%; }
+
+.observations {
+  width: 13%;
+  min-width: 13%; }
+
+.visit {
+  width: 3%; }
+  .visit input {
+    width: 1.6em;
+    height: 1.6em;
+    margin-left: 19%;
+    margin-top: 16%; }
+
+.phone textarea, .observations textarea, .note textarea {
+  width: 90%;
+  min-width: 80%;
+  border: 1px solid #d5d5da;
+  border-radius: 4px;
+  float: left;
+  resize: none;
+  font-size: 13px;
+  margin-left: 5%; }
+
+.actions {
+  width: 2%;
+  margin-left: 4px;
+  text-align: center; }
+
+#dialog-form form {
+  height: 100%; }
+
+fieldset {
+  height: 90%; }
+
+#observationsText {
+  width: 100%;
+  height: 80%;
+  resize: none; }
+
+.initDateHeader {
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */
