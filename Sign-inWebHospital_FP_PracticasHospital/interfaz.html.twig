@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro/Alta de Usuario</title>
+      <!-- Imágenes. -->
+        <link rel="stylesheet" href="{{ asset('designInterfaz/Images/LogoGobierno.png') }}"/>
+      <!-- Fav-Icons. -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+      <!-- CSS. -->
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/style.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/animations.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/global.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/media-queries.css') }}"/>
+      <!-- JS. -->
+        <script src="{{ asset('designInterfaz/JS/script.js') }}" defer></script>    
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <form action="/action_page.php">
+        <fieldset id="form">
+            <legend><h1>Formulario de Registro/Alta de Usuario</h1></legend>
+
+            <fieldset>
+              <legend><h2>Información Personal</h2></legend>
+                <label for="Nombre">Nombre completo:</label>
+                  <input type="text" id="Nombre" name="Nombre" placeholder="Ingrese su nombre" required>
+                
+                <label for="Apellidos">Apellidos:</label>
+                  <input type="text" id="Apellidos" name="Apellidos" placeholder="Ingrese sus apellidos" required>
+                
+                <label for="DNI/NIE/NIF">DNI / NIE/ NIF:</label>
+                  <input type="text" id="DNI/NIE/NIF" name="DNI/NIE/NIF" placeholder="Ingrese su DNI / NIE / NIF" required>
+                
+                <section id="fecha">
+                  <section class="año">
+                    <label for="Fecha de nacimiento">Fecha de nacimiento:</label>
+                      <input type="date" name="FechaDeNacimiento" id="Fecha de nacimiento" required>
+                  </section>
+
+                  <section class="año">
+                    <label for="Edad">Edad:</label>
+                      <input type="number" id="Edad" name="Edad" min="17" max="123" placeholder="Ingrese su edad" required>
+                  </section>
+                </section>
+
+                <section id="formPais">
+                  <section class="pais">
+                    <label for="pais">País de nacimiento:</label>
+                      <select class="paisLista" required>
+                      <!--
+                        Opción inicial del desplegable:
+                        - "value="" ": Valor vacío porque no es un país válido.
+                        - "disabled" : Impide que el usuario pueda seleccionar esta opción.
+                        - "selected" : hace que esta opción aparezca seleccionada por defecto al cargar la página.
+                      -->
+                        <option class="formulario" value="" disabled selected>Seleccione su país</option> <!-- El atributo "disabled selected". -->
+                      </select>
+                  </section>
+
+                  <section class="pais">
+                    <label for="pais">País de residencia:</label>
+                      <select class="paisLista" required>
+                        <option class="formulario" value="" disabled selected>Seleccione su país</option>
+                      </select>
+                  </section>
+                </section>
+
+                <label for="genero">Género:</label>
+                  <section id="formGenero">
+                    <section class="generos">
+                      <label class="genero" for="opcionGenero1"><i class="fa-solid fa-person" style="color: #000000;"></i></label>
+                        <input id="opcionGenero1" name="Opcion" type="radio" value="opcionGenero1" required> <!-- Como los "input" de tipo "radio" comparten el mismo nombre, sólo es necesario poner un "required", aunque no pasa nada si se pone en todos. -->
+                    </section>
+
+                    <section class="generos">
+                      <label class="genero" for="opcionGenero2"><i class="fa-solid fa-person-dress" style="color: #000000;"></i></label>
+                        <input id="opcionGenero2" name="Opcion" type= "radio" value="opcionGenero2">
+                    </section>
+
+                    <section class="generos">
+                      <label class="genero" for="opcionGenero3"><i class="fa-solid fa-person-half-dress" style="color: #000000;"></i></label>
+                        <input id="opcionGenero3" name="Opcion" type= "radio" value="opcionGenero3">
+                    </section>
+                  </section>
+            </fieldset>
+
+            <fieldset>
+              <legend><h2>Contacto</h2></legend>
+                  <label for="Teléfono">Teléfono:</label>
+                    <input type="text" id="Teléfono" name="Teléfono" placeholder="Ingrese su correo electónico" pattern="[0-9]{9}" required>
+                  
+                  <label for="E-mail">E-mail:</label>
+                    <input type="email" id="E-mail" name="E-mail" placeholder="Ingrese su correo electónico" required>              
+                  
+                  <label for="Contraseña">Contraseña:</label>
+                    <input type="password" id="Contraseña" name="Contraseña" placeholder="Ingrese su contraseña" required>
+            </fieldset>
+
+            <fieldset>
+              <legend><h2>Dirección de Red del equipo en uso</h2></legend>
+                <label for="Dirección IPv4">Dirección IPv4:</label>
+                  <input name="Dirección IPv4" type="text" placeholder="Escribe su dirección IPv4" pattern="^((25[0-5]|2[0-4][0-9]|1\d\d|[1-9]?\d)(\.)){3}(25[0-5]|2[0-4][0-9]|1\d\d|[1-9]?\d)$" required autofocus>
+            </fieldset>
+
+            <input id="buttonCheck" type="submit" value="Enviar">
+          </fieldset>
+      </form>
+    </main>
+
+    <footer></footer>
+
+    <img id="background" src="{{ asset('designInterfaz/Images/Fondo.png') }}" alt="#">
+  </body>
+</html>
+
+{% block page %}
+	{% if error %}
+		<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+	{% endif %}
+{% endblock %}

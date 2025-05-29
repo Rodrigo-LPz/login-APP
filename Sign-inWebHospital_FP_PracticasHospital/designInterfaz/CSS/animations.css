@@ -1,0 +1,23 @@
+input:hover{
+  /* Añade una transición suave para la apariciób de la línea. */
+  transition: width 1s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: var(--color-background-form-buttonCheck-hover1);
+}
+
+select:hover{
+  /* Añade una transición suave para la apariciób de la línea. */
+  transition: width 1s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: var(--color-background-form-buttonCheck-hover1);
+}
+
+#buttonCheck:hover{
+  /* Añade una transición suave para la apariciób de la línea. */
+  transition: width 1s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 5px;
+  background-color: var(--color-background-form-buttonCheck-hover2);
+}

@@ -1,0 +1,281 @@
+/* Monitores grandes (más de 1440px. */
+@media screen and (min-width: 1440px){
+  #card{
+    height: 670px;
+    width: 620px;
+  }
+  #privateArea{
+    height: 130px;
+    width: 270px;
+    margin: 25px 0px 40px 0px;
+  }
+  #loginCheck{
+    height: auto;
+    width: 350px;
+    gap: 15px;
+  }
+  input{
+    height: 50px;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 1.3rem;
+  }
+  .icon{
+    height: 50px;
+    width: 50px;
+  }
+  #buttonCheck{
+    height: 50px;
+    width: 350px;
+    margin: 15px 0px 45px 0px;
+    font-size: 1.3rem;
+  }
+  #logo{
+    height: 50px;
+    width: 80px;
+    margin: 20px 0px 15px 0px;
+  }
+  h5{
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  p{
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Monitores normales (hasta 1439px). */
+@media screen and (min-width: 1025px) and (max-width: 1439px){
+  #card{
+    height: 650px;
+    width: 600px;
+  }
+  #privateArea{
+    height: 100px;
+    width: 230px;
+    margin: 25px 0px 40px 0px;
+  }
+  #loginCheck{
+    height: auto;
+    width: 330px;
+    gap: 20px;
+  }
+  input{
+    height: 50px;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 1.3rem;
+  }
+  .icon{
+    height: 50px;
+    width: 50px;
+  }
+  #buttonCheck{
+    height: 50px;
+    width: 350px;
+    margin: 25px 0px 40px 0px;
+    font-size: 1.3rem;
+  }
+  #logo{
+    height: 40px;
+    width: 70px;
+    margin: 15px 0px 10px 0px;
+  }
+  h5{
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+  p{
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Monitores pequeños o portátiles (hasta 1024px). */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  #card{
+    height: 550px;
+    width: 500px;
+  }
+  #privateArea{
+    height: 90px;
+    width: 230px;
+    margin: 20px 0px 25px 0px;
+  }
+  #loginCheck{
+    height: auto;
+    width: 300px;
+    gap: 15px;
+  }
+  input{
+    height: 45px;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 1.1rem;
+  }
+  .icon{
+    height: 45px;
+    width: 45px;
+  }
+  #buttonCheck{
+    height: 50px;
+    width: 300px;
+    margin: 10px 0px 35px 0px;
+    font-size: 1.1rem;
+  }
+  #logo{
+    height: 35px;
+    width: 65px;
+    margin: 10px 0px;
+  }
+  h5{
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+  p{
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Tablets grandes (768px a 991px). */
+@media screen and (min-width: 600px) and (max-width: 768px){
+  #card{
+    width: 450px;
+    height: 500px;
+  }
+  #privateArea{
+    height: 85px;
+    width: 200px;
+    margin: 15px 0px 25px 0px;
+  }
+  #loginCheck{
+    height: auto;
+    width: 300px;
+    gap: 20px;
+  }
+  input{
+    height: 40px;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 1.1rem;
+  }
+  .icon{
+    height: 40px;
+    width: 40px;
+  }
+  #buttonCheck{
+    height: 40px;
+    width: 300px;
+    margin: 10px 0px 30px 0px;
+    font-size: 1.1rem;
+  }
+  #logo{
+    height: 35px;
+    width: 65px;
+    margin: 10px 0px;
+  }
+  h5{
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+  p{
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Tablets pequeñas (hasta 599px). */
+@media screen and (min-width: 426px) and (max-width: 599px){
+  #card{
+    width: 320px;
+    height: 470px;
+  }
+  #privateArea{
+    height: 75px;
+    width: 150px;
+    margin: 20px 0px 25px 0px;
+  }
+  #loginCheck{
+    height: auto;
+    width: 250px;
+    gap: 10px;
+  }
+  input{
+    height: 35px;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 0.9rem;
+  }
+  .icon{
+    height: 35px;
+    width: 35px;
+  }
+  #buttonCheck{
+    height: 35px;
+    width: 250px;
+    margin: 20px 0px 35px 0px;
+    font-size: 0.9rem;
+  }
+  #logo{
+    height: 25px;
+    width: 50px;
+    margin: 10px 0px;
+  }
+  h5{
+    font-size: 0.65rem;
+    letter-spacing: 0px;
+  }
+  p{
+    font-size: 0.85rem;
+    letter-spacing: 0px;
+  }
+}
+
+/* Móviles (hasta 425px). */
+@media screen and (max-width: 425px){
+  #card{
+    width: 270px;
+    height: 400px;
+  }
+  #privateArea{
+    height: 60px;
+    width: 120px;
+    margin: 20px 0px 30px 0px;
+  }
+  #loginCheck{
+    height: auto;
+    width: 200px;
+    gap: 10px;
+  }
+  input{
+    height: 30px;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 0.7rem;
+  }
+  .icon{
+    height: 30px;
+    width: 35px;
+  }
+  #buttonCheck{
+    height: 30px;
+    width: 200px;
+    margin: 10px 0px 30px 0px;
+    font-size: 0.7rem;
+  }
+  #logo{
+    height: 20px;
+    width: 40px;
+    margin: 7px 0px;
+  }
+  h5{
+    font-size: 0.55rem;
+    letter-spacing: 0px;
+  }
+  p{
+    font-size: 0.75rem;
+    letter-spacing: 0px;
+  }
+}

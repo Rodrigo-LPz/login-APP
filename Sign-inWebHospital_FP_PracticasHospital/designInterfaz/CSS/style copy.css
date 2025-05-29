@@ -1,0 +1,183 @@
+/* Reseteo de los valores. */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+
+}
+
+/* Body. */
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--color-background-page);
+}
+
+/* Main. */
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+form{
+  height: auto;
+  width: 50%;
+  margin: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form{
+  height: auto;
+  width: 85%;
+  padding: 20px 50px;
+  background-color: var(--color-background-form);
+  border-width: 10px;
+  border-color: var(--color-background-form-border);
+}
+
+fieldset{
+  height: auto;
+  width: auto;
+  margin-bottom: 33px;
+  padding: 20px 50px;
+  background-color: var(--color-background-fieldset);
+  border-width: 5px;
+  border-color: var(--color-background-form-border);
+}
+
+/* Entradas de datos. */
+label, input{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-general);
+  font-size: var(--font-size-general);
+}
+
+label{
+  margin-top: 15px;
+}
+
+input{
+  margin-top: 3px;
+  padding: 7px;
+}
+
+#fecha{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  gap: 15px;
+}
+
+.año{
+  height: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.año > input{
+  height: 33px;
+  width: 85%;
+}
+
+#formPais{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  gap: 15px;
+}
+
+.pais{
+  height: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pais > select{
+  height: 33px;
+  width: 85%;
+  padding: 7px;
+}
+
+#formGenero{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.generos{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.generos > input{
+  margin-top: 7px;
+}
+
+/* Fondo de pantalla. */
+#background{
+  /* Fijamos la imagen al viewport, es decir, a la parte visible de la página. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  /* Recorta el sorbrante de la imagen. */
+  object-fit: cover;
+  /* Aplica una capa de opacidad/transparencia. */
+  opacity: 0.1;
+}
+
+h1{
+  padding: 0px 5px;
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-title);
+}
+
+h2{
+  margin-bottom: 3px;
+  padding: 0px 5px;
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-subtitle);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+  .fa-solid{
+    font-size: 40px
+  }

@@ -1,0 +1,7 @@
+#buttonCheck:hover{
+  /* Añade una transición suave para la apariciób de la línea. */
+  transition: width 1s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background-color: var(--color-background-form-buttonCheck-hover);
+}
