@@ -1,0 +1,36 @@
+/* Font - Rubik. */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* Font - Open Sans. */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+/* Text. */ 
+:root{
+    /* Familys. */
+    --font-family-titles: 'Rubik', 'Sans-serif', 'Poppins', 'Serif', 'Arial';
+    --font-family-titles: 'Rubik', 'Sans-serif', 'Poppins', 'Serif', 'Arial';
+    --font-family-general: 'Open Sans', 'Sans-serif', 'Poppins', 'Serif', 'Arial';
+    
+    /* Sizes. */
+    --font-size-title: 1.7rem;
+    --font-size-subtitle: 1.3rem;
+    --font-size-general: 1rem;
+}
+
+/* Background. */ 
+:root{
+    /* Colors. */
+    --color-background-page: #A8D0DD;
+    --color-background-form: #EBCC14;
+    --color-background-form-border: #355989;
+    --color-background-fieldset: #FFFFFF;
+}
+
+/* Hover. */ 
+:root{
+    /* Colors. */
+    --color-background-form-buttonCheck-hover1: #1831528e;
+    --color-background-form-buttonCheck-hover2: #183152e0;
+}

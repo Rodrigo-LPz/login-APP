@@ -1,0 +1,23 @@
+.alertSuccess, .alertError{
+    height: auto;
+    width: 80%;
+    padding: 14px 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: var(--font-size-general);
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.alertSuccess{
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.alertError{
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}

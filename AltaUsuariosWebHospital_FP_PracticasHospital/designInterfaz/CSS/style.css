@@ -1,0 +1,110 @@
+/* Reseteo de los valores. */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+
+}
+
+/* Body. */
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--color-background-page);
+}
+
+/* Main. */
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  height: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form{
+  height: auto;
+  width: 100%;
+  background-color: var(--color-background-form);
+  border-width: 10px;
+  border-color: var(--color-background-form-border);
+}
+
+fieldset{
+  height: auto;
+  width: auto;
+  margin-bottom: 35px;
+  padding: 20px 65px;
+  background-color: var(--color-background-fieldset);
+  border-width: 5px;
+  border-color: var(--color-background-form-border);
+}
+
+/* Entradas de datos. */
+label, input, select{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-general);
+  font-size: var(--font-size-general);
+}
+
+input, select{
+  margin: 5px 0px 15px 0px;
+  padding: 10px;
+}
+
+#buttonCheck{
+  margin: 45px 0px 20px 0px;
+  padding: 10px;
+}
+
+/* Fondo de pantalla. */
+#background{
+  /* Fijamos la imagen al viewport, es decir, a la parte visible de la página. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  /* Recorta el sorbrante de la imagen. */
+  object-fit: cover;
+  /* Aplica una capa de opacidad/transparencia. */
+  opacity: 0.1;
+}
+
+h1{
+  margin-bottom: 10px;
+  padding: 0px 5px;
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-title);
+}
+
+h2{
+  margin-bottom: 10px;
+  padding: 0px 5px;
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-subtitle);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}

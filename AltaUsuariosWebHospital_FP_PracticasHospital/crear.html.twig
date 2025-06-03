@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Alta de Usuario</title>
+      <!-- Imágenes. -->
+        <link rel="stylesheet" href="{{ asset('designInterfaz/Images/LogoGobierno.png') }}"/>
+      <!-- Fav-Icons. -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+      <!-- CSS. -->
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/style.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/animations.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/global.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/media-queries.css') }}"/>
+      
+        <link rel="stylesheet" href="{{ asset('designInterfaz/CSS/alerts.css') }}"/>
+      <!-- JS. -->
+        <script src="{{ asset('designInterfaz/JS/script.js') }}" defer></script>    
+  </head>
+  <body>  
+    <header></header>
+
+    <main>
+      <form action="{{ path('adminCrear') }}" method="post">
+        <fieldset id="form">
+            <legend><h1>Formulario Alta de Usuario</h1></legend>
+
+            <fieldset>
+              <legend><h2>Información Personal/Usuario</h2></legend>
+                <label for="Username">Username (DNI / NIE / NIF):</label>
+                  <input type="text" id="DNI/NIE/NIF" name="username" placeholder="Ingrese el username (DNI / NIE / NIF)" pattern="^([XYZxyz]\d{7}[A-Za-z]|\d{8}[A-Za-z])$" title="Por favor, ingrese un DNI, NIE o NIF válido. Ej: 12345678A(DNI/NIF) o X1234567A(NIE) [8 dígitos seguidos de una letra]." required>
+
+                <label for="Rol">Rol:</label> 
+                  <select class="rolLista" name="rol" required>
+                  <!--
+                    Opción inicial del desplegable:
+                    - "value="" ": Valor vacío porque no es un rol válido.
+                    - "disabled" : Impide que el usuario pueda seleccionar esta opción.
+                    - "selected" : hace que esta opción aparezca seleccionada por defecto al cargar la página.
+                  -->
+                    <option class="formularioRol" value="" disabled selected>Escoga/Seleccione el nuevo rol del/para el usuario</option>
+                    <option class="formularioRol" value="role_user">Usuario</option>
+                    <option class="formularioRol" value="role_admin">Administrador</option>
+                  </select>
+
+            <input id="buttonCheck" type="submit" value="Registrar / Modificar">
+          </fieldset>
+      </form>
+    </main>
+
+    <footer></footer>
+
+    <img id="background" src="{{ asset('designInterfaz/Images/Fondo.png') }}" alt="#">
+  </body>
+</html>
+
+{% block page %}
+  {# Mensaje de error de/en la autenticación u otros. #}
+    {% if error is defined and error %}
+      <div class="alertError">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+  {# Mensajes flash personalizados desde el controlador para los intentos exitosos sobre el registro de usuarios. #}
+    {#{% for message in app.flashes('success') %}
+      <div class="alertSuccess">{{ message }}</div>
+    {% endfor %}#}
+
+  {# Mensajes flash personalizados desde el controlador para los intentos erróneos sobre el registro de usuarios. #}
+    {#{% for message in app.flashes('error') %}
+      <div class="alertError">{{ message }}</div>
+    {% endfor %}#}
+{% endblock %}

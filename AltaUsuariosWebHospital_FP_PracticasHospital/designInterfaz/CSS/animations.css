@@ -1,0 +1,46 @@
+input[type="text"]:hover, select:hover{
+  /* Añade una transición suave para la apariciób de la línea. */
+  transition: width 1s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: var(--color-background-form-buttonCheck-hover1);
+}
+
+input[type="text"]:focus, select:focus{ /* El atributo ":focus" deja/se centra el estilo (cuando estás escribiendo). */
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: var(--color-background-form-buttonCheck-hover1);
+}
+
+/* Cuando el campo tiene contenido (solo si tiene placeholder) */
+input[type="text"]:not(:placeholder-shown){ /* El atributo ":not(:placeholder-shown)" deja/centra el estilo [cuando el campo tiene contenido (solo si tiene placeholder)]. */
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: var(--color-background-form-buttonCheck-hover1);
+}
+
+select:valid { /* El atributo ":valid" deja/centra el estilo (cuando el campo tiene un valor válido/'escrito'). */
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: var(--color-background-form-buttonCheck-hover1);
+}
+
+#buttonCheck:hover{
+  /* Añade una transición suave para la apariciób de la línea. */
+  transition: width 1s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 5px;
+  background-color: var(--color-background-form-buttonCheck-hover2);
+}
+
+
+/* Animaciones para las alertas. */
+@keyframes fadeIn{
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación de tipo 'fade-in' o fundido de entrada (viene dada por el "@keyframes"). */
+.alert{
+  animation: fadeIn 0.7s ease-in;
+}
