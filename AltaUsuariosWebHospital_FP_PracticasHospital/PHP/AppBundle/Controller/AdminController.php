@@ -64,6 +64,7 @@ class AdminController extends Controller{
             return $this->redirectToRoute('adminCrear'); /* Esto es una buena práctica para evitar el problema del reenvío del formulario (POST/REDIRECT/GET). */
         }
 
+        // Renderizado (lectura e interpretación por parte del navegador de código tipo 'HTML', 'CSS', 'JavaScript', etc.)de la vista del formulario de creación/actualización de usuarios.
         return $this->render(
             'admin/crear.html.twig',[
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..') . DIRECTORY_SEPARATOR,]
