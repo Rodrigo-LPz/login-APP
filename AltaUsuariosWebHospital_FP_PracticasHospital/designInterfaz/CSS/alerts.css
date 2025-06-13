@@ -1,13 +1,13 @@
 .alertSuccess, .alertError{
-    height: auto;
-    width: 80%;
-    padding: 14px 20px;
-    margin-top: 10px;
-    text-align: center;
-    font-size: var(--font-size-general);
-    font-weight: bold;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: auto;
+  width: 80%;
+  padding: 14px 20px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: var(--font-size-general);
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .alertSuccess{
