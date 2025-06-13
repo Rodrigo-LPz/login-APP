@@ -21,7 +21,7 @@ class AdminController extends Controller{
             
             // Ejecución de al menos un intento para la actualización y/o creación del usuario posterior a su validación.
             try{
-                // Se obtiene el "entityManager" de 'Doctrine ORM' para/poder realizar las operaciones e interactuar con la base de datos.
+                // Se obtiene el "entityManager" de 'Doctrine ORM' para poder realizar las operaciones e interactuar con la base de datos.
                 $entityManager = $this->getDoctrine()->getManager();
 
                 // Validación de los datos recibidos (busca al usuario por su 'username', es decir, por su 'DNI/NIE/NIF').
